@@ -1,39 +1,32 @@
-*{
-    text-align: center;
+/* Estilos para pantallas mayores a 600px */
+@media (min-width: 600px) {
+    .content {
+        flex-direction: row; /* Cambia la dirección a horizontal (row) */
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+    }
 }
-.footer-content {
+
+/* Estilos para pantallas menores o iguales a 600px */
+@media (max-width: 600px) {
+    .content{
+        flex-direction: column; /* Cambia la dirección a vertical (column) */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+.content{
     display: flex;
-    justify-content: space-between;
 }
-
-.footer-section {
-    flex: 0 0 30%; /* Ancho de cada columna, ajusta según sea necesario */
-}
-
-.footer-section h2 {
-    color: #333;
-}
-
-.footer-section p {
-    color: #666;
-}
-
-.footer-section ul {    
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 5px;
-}
-
-.footer-section ul li a {
-    color: #666;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
+/* Estilos específicos para los elementos dentro de .content */
+.about,
+.contact,
+.links {
+    flex-basis: calc(33.33% - 20px); /* Distribuye el ancho equitativamente (con margen) */
+    margin: 10px; /* Espacio entre los elementos */
+    text-align: center;
 }
 
 .contact span {
@@ -41,27 +34,10 @@
     margin-bottom: 5px;
 }
 
-.socials a {
-    color: #666;
-    text-decoration: none;
-    margin-right: 10px;
+.links li {
+    display: inline;
+    margin-right: 5px; /* Agrega un margen derecho para separar los elementos */
 }
-
-.socials a:hover {
-    color: #333;
-}
-
-.footer-bottom {
+.bottom{
     text-align: center;
-    margin-top: 20px;
-    color: #999;
-}
-
-#links li{
-    display: inline-block;
-    text-align: left;
-}
-
-#description{
-    text-align: left;
 }

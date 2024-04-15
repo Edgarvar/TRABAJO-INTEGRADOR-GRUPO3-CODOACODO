@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reservation.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Registro de Reservas</h1>
+    <form action="procesar_reserva.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" min="18:00" max="22:00" required >
+
+        <label for="personas">Número de Personas:</label>
+        <input type="number" id="personas" name="personas" min="1" required>
+
+        <input type="submit" value="Enviar Reserva">
+    </form>
+
+</body>
+<footer>
+    <div class="footer">
+        <iframe id="footer-iframe" src="footer.html" scrolling="no"></iframe>
+    </div>
+    <script>
+        function resizeIframe() {
+            var iframe = document.getElementById("footer-iframe");
+            iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 20) + 'px';
+        }
+
+        // Llama a resizeIframe() cuando se carga la página
+        window.addEventListener('load', resizeIframe);
+
+        // Llama a resizeIframe() cuando cambia el tamaño de la ventana
+        window.addEventListener('resize', resizeIframe);
+    </script>
+</footer>
+
+</html>

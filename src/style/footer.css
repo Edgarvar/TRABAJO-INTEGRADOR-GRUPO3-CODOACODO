@@ -19,6 +19,7 @@
 }
 .content{
     display: flex;
+    font-family: Arial, sans-serif;
 }
 /* Estilos específicos para los elementos dentro de .content */
 .about,

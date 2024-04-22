@@ -1,0 +1,44 @@
+/* Estilos para pantallas mayores a 600px */
+@media (min-width: 600px) {
+    .content {
+        flex-direction: row; /* Cambia la dirección a horizontal (row) */
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas menores o iguales a 600px */
+@media (max-width: 600px) {
+    .content{
+        flex-direction: column; /* Cambia la dirección a vertical (column) */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+.content{
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+/* Estilos específicos para los elementos dentro de .content */
+.about,
+.contact,
+.links {
+    flex-basis: calc(33.33% - 20px); /* Distribuye el ancho equitativamente (con margen) */
+    margin: 10px; /* Espacio entre los elementos */
+    text-align: center;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.links li {
+    display: inline;
+    margin-right: 5px; /* Agrega un margen derecho para separar los elementos */
+}
+.bottom{
+    text-align: center;
+}

@@ -9,3 +9,12 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.footer{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.footer iframe{
+    width: 100%;
+    border: none;
+}

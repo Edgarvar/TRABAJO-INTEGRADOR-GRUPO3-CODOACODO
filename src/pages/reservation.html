@@ -4,11 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/src/style/navbar.css">
     <link rel="stylesheet" href="../style/reservation.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/footer.css">
+    <title>Reserva</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Cocina CODO a CODO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/carta.html">Carta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/pages/sobreNosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/pages/galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/src/pages/reservation.html" aria-disabled="true">Reserva</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <h1>Registro de Reservas</h1>
     <form action="procesar_reserva.php" method="post">
@@ -19,31 +57,52 @@
         <input type="date" id="fecha" name="fecha" required>
 
         <label for="hora">Hora:</label>
-        <input type="time" id="hora" name="hora" min="18:00" max="22:00" required >
+        <input type="time" id="hora" name="hora" min="18:00" max="22:00" required>
 
         <label for="personas">Número de Personas:</label>
         <input type="number" id="personas" name="personas" min="1" required>
 
         <input type="submit" value="Enviar Reserva">
     </form>
-
+    <footer>
+        <div class="container">
+            <div class="footer-contents">
+                <h4>Acerca de Nosotros</h4>
+                <p class="item">Ubicado en el corazón de la ciudad, el Restaurante “Codo a Codo” es un destino
+                    gastronómico que te
+                    transportará a diferentes rincones del planeta. Aquí, la diversidad y la autenticidad son las
+                    estrellas
+                    del espectáculo.</p>
+            </div>
+            <div class="footer-contents contact-us">
+                <h4>Contactenos</h4>
+                <span class="contact-us"><i class="fas fa-map-marker"></i> Av. Programadores 2024</span>
+                <span class="contact-us"><i class="fas fa-envelope"></i> info@codoacodo.com</span>
+                <span class="contact-us"><i class="fas fa-phone"></i> +541123456789</span>
+                <div class="socials">
+                    <a href="#" class="icono"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icono"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icono"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contents">
+                <h4>Enlaces Rápidos</h4>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="/index.html" class="boton first">Inicio</a>
+                    <a href="/carta.html" class="boton">Carta</a>
+                    <a href="/src/pages/sobreNosotros.html" class="boton last">Nosotros</a>
+                    <a href="/src/pages/contacto.html" class="boton">Contactenos</a>
+                    <a href="/src/pages/galeria.html" class="boton">Galeria</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="copy">© 2021 Codo a Codo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
-<footer>
-    <div class="footer">
-        <iframe id="footer-iframe" src="footer.html" scrolling="no"></iframe>
-    </div>
-    <script>
-        function resizeIframe() {
-            var iframe = document.getElementById("footer-iframe");
-            iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 20) + 'px';
-        }
-
-        // Llama a resizeIframe() cuando se carga la página
-        window.addEventListener('load', resizeIframe);
-
-        // Llama a resizeIframe() cuando cambia el tamaño de la ventana
-        window.addEventListener('resize', resizeIframe);
-    </script>
-</footer>
 
 </html>

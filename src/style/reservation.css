@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f5b96f;
 }
 
 h1 {
@@ -19,9 +19,9 @@ form {
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #c8854c;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -44,7 +44,7 @@ input[type="number"] {
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #f57125;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -53,22 +53,51 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #d03f05;
 }
 
 /*------------------------------------------*/
 
-.footer{
+.footer {
     display: flex;
     width: 100%;
     height: auto;
 }
-.footer iframe{
+
+
+.footer iframe {
     width: 100%;
     border: none;
+    height: 0; /* Inicialmente oculto */    
+    animation: fadeIn 1s ease forwards; /* Aplica la animación de barrido hacia abajo */
+    transform-origin: top; /* Define el origen de la transformación */
+    
+}
+
+@keyframes sweepDown {
+    from {
+        height: 0; /* Altura inicial de 0 */
+        opacity: 0; /* Inicialmente transparente */
+    }
+    to {
+        height: auto; /* Altura deseada */
+        opacity: 1; /* Opacidad completa */
+    }
 }
 
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
+    to {
+        opacity: 1;
+    }
+}
 
-
+/* Aplica la animación al formulario */
+form {
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 6px 12px #000000;
+}

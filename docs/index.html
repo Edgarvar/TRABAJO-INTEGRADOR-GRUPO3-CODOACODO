@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/style/index.css">
     <link rel="stylesheet" href="assets/style/navbar.css">
+    <link rel="stylesheet" href="assets/style/footer.css">
     <title>Restaurante CODO a CODO of</title>
 </head>
 <body>
@@ -149,21 +150,40 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer">
-            <iframe id="footer-iframe" src="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/footer.html" scrolling="no"></iframe>
+        <div class="content">
+            <div class="about">
+                <h2>Acerca de Nosotros</h2>
+                <p id="description">Ubicado en el corazón de la ciudad, el Restaurante “Codo a Codo” es un destino
+                    gastronómico que te
+                    transportará a diferentes rincones del planeta. Aquí, la diversidad y la autenticidad son las estrellas
+                    del espectáculo.</p>
+            </div>
+            <div class="contact">
+                <div class="contact-us">
+                    <h2>Contactenos</h2>
+                    <span><i class="fas fa-map-marker"></i> Av. Programadores 2024</span>
+                    <span><i class="fas fa-envelope"></i> info@codoacodo.com</span>
+                    <span><i class="fas fa-phone"></i> +541123456789</span>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="links">
+                <h2>Enlaces Rápidos</h2>
+                <ul id="links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
         </div>
-        <script>
-            function resizeIframe() {
-                var iframe = document.getElementById("footer-iframe");
-                iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 20) + 'px';
-            }
-
-            // Llama a resizeIframe() cuando se carga la página
-            window.addEventListener('load', resizeIframe);
-
-            // Llama a resizeIframe() cuando cambia el tamaño de la ventana
-            window.addEventListener('resize', resizeIframe);
-        </script>
+        <div class="bottom">
+            &copy; 2024 Codo a Codo. Todos los derechos reservados.
+        </div>
     </footer>
 
 

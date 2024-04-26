@@ -11,6 +11,11 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+
+.banner  {
+    padding: 5%;
+ }
+ 
 /*------------------------------------------*/
 
 .footer {

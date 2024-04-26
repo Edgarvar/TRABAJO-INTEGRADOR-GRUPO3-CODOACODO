@@ -14,13 +14,20 @@ h1 {
 }
 
 .textcarta  {
-
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
-    
     } 
 
+.subtituloscarta  {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+
+.banner  {
+   padding: 5%;
+}
 
 /*------------------------------------------*/
 
@@ -36,6 +43,5 @@ h1 {
     border: none;
     height: 0; /* Inicialmente oculto */    
     animation: fadeIn 1s ease forwards; /* Aplica la animación de barrido hacia abajo */
-    transform-origin: top; /* Define el origen de la transformación */
-    
+    transform-origin: top; /* Define el origen de la transformación */ 
 }

@@ -1,0 +1,19 @@
+.miTexto {
+    font-size: 2em; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente detrás */
+    background: linear-gradient(90deg, #7e1300, #f57125); /* Gradiente de color que se desplazará */
+    background-clip: text; /* Limita el gradiente al área del texto */
+    -webkit-background-clip: text; /* Soporte para navegadores basados en WebKit */
+    animation: mueveColor 1s linear infinite; /* Aplica la animación al fondo del texto */
+  }
+
+  @keyframes mueveColor {
+    0% {
+      background-position: 0% 0%; /* Posición inicial del gradiente */
+    }
+    100% {
+      background-position: 100% 0%; /* Desplaza el gradiente hacia la derecha */
+    }
+  }
+  

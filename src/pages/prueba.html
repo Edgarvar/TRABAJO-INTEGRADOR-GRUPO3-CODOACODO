@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación de Color de Texto</title>
+  <style>
+    .miTexto {
+      font-size: 2em; /* Tamaño del texto */
+      font-weight: bold; /* Grosor del texto */
+      color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente detrás */
+      background-image: linear-gradient(
+        to right, 
+        #7e1300, 
+        #f5b96f, 
+        #7e1300
+      ); /* Gradiente con múltiples colores */
+      background-size: 200% 100%; /* Define el tamaño del fondo para que pueda moverse */
+      background-clip: text; /* Hace que el fondo sólo sea visible en el área del texto */
+      -webkit-background-clip: text; /* Soporte para navegadores basados en WebKit */
+      animation: mueveColor 3s linear infinite alternate; /* Aplica la animación al fondo del texto */
+    }
+  
+    @keyframes mueveColor {
+      0% {
+        background-position: 0% 0%; /* Posición inicial del gradiente */
+      }
+      25% {
+        background-position: 25% 0%; /* Posición intermedia del gradiente */
+      }
+      75% {
+        background-position: 75% 0%; /* Posición intermedia del gradiente */
+      }
+      100% {
+        background-position: 100% 0%; /* Posición final del gradiente */
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="miTexto">Este texto tiene un efecto de cambio de color de izquierda a derecha.</p>
+</body>
+</html>

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/index.css">
     <link rel="stylesheet" href="assets/style/navbar.css">
+    <link rel="stylesheet" href="assets/style/footer.css">
     <link rel="stylesheet" href="assets/style/reservation.css">
-
-
+    <link rel="icon" type="image/png" sizes="92x92" href="assets/img/logo/Logo_codo a codo_B.png">
     <title>Reserva</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand" href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO">Cocina CODO a CODO</a>
+            <a class="navbar-brand icon-link" href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/">
+                <img src="assets/img/logo/Logo_codo a codo_A.png" class="bi" style="font-size: 5rem;" alt="">
+            </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,22 +65,43 @@
         <input type="submit" value="Enviar Reserva">
     </form>
 
+    <!-- FOOTER -->
     <footer>
-        <div class="footer">
-            <iframe id="footer-iframe" src="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/footer.html" scrolling="no"></iframe>
+        <div class="container">
+            <div class="footer-contents">
+                <h4>Acerca de Nosotros</h4>
+                <p class="item">Ubicado en el corazón de la ciudad, el Restaurante “Codo a Codo” es un destino
+                    gastronómico que te
+                    transportará a diferentes rincones del planeta. Aquí, la diversidad y la autenticidad son las
+                    estrellas
+                    del espectáculo.</p>
+            </div>
+            <div class="footer-contents contact-us">
+                <h4>Contactenos</h4>
+                <span class="contact-us"><i class="fas fa-map-marker"></i> Av. Programadores 2024</span>
+                <span class="contact-us"><i class="fas fa-envelope"></i> info@codoacodo.com</span>
+                <span class="contact-us"><i class="fas fa-phone"></i> +541123456789</span>
+                <div class="socials">
+                    <a href="#" class="icono"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icono"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icono"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contents">
+                <h4>Enlaces Rápidos</h4>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/" class="boton first">Inicio</a>
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/carta.html" class="boton">Carta</a>
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/sobreNosotros.htmll" class="boton last">Nosotros</a>
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/contacto.html" class="boton">Contactenos</a>
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/galeria.html" class="boton">Galeria</a>
+                    <a href="https://edgarvar.github.io/TRABAJO-INTEGRADOR-GRUPO3-CODOACODO/reserva.html" class="boton">Reserva</a>
+                </div>
+            </div>
         </div>
-        <script>
-            function resizeIframe() {
-                var iframe = document.getElementById("footer-iframe");
-                iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 20) + 'px';
-            }
-
-            // Llama a resizeIframe() cuando se carga la página
-            window.addEventListener('load', resizeIframe);
-
-            // Llama a resizeIframe() cuando cambia el tamaño de la ventana
-            window.addEventListener('resize', resizeIframe);
-        </script>
+        <div>
+            <p class="copy">© 2021 Codo a Codo. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 

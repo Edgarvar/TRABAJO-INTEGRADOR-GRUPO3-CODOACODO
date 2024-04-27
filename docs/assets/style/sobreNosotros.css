@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5b96f;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.banner  {
+    padding: 5%;
+ }
+ 
+/*------------------------------------------*/
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+.footer iframe {
+    width: 100%;
+    border: none;
+    height: 0; /* Inicialmente oculto */    
+    animation: fadeIn 1s ease forwards; /* Aplica la animación de barrido hacia abajo */
+    transform-origin: top; /* Define el origen de la transformación */
+    
+}

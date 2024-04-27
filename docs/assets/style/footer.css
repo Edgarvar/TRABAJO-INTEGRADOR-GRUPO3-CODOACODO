@@ -1,44 +1,139 @@
-/* Estilos para pantallas mayores a 600px */
+/* Estilos para pantallas mayores o iguales a 600px */
 @media (min-width: 600px) {
-    .content {
-        flex-direction: row; /* Cambia la dirección a horizontal (row) */
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: center;
+    .container {
+        flex-direction: row;
     }
+
+    .footer-contents {
+        width: calc(100% / 3);
+    }
+    .footer-contents.contact-us {
+        position: relative; /* Para que los pseudoelementos se posicionen correctamente */
+      }
+      
+      .footer-contents.contact-us::before,
+      .footer-contents.contact-us::after {
+        content: ""; /* Necesario para que los pseudoelementos se muestren */
+        position: absolute; /* Para posicionar los pseudoelementos */
+        top: 0; /* Los pseudoelementos empiezan desde el borde superior del contenedor */
+        bottom: 0; /* Los pseudoelementos terminan en el borde inferior del contenedor */
+        width: 1px; /* Ancho de la línea */
+        background-color: #000; /* Color de la línea */
+      }
+      
+      .footer-contents.contact-us::before {
+        left: 0; /* Línea a la izquierda */
+      }
+      
+      .footer-contents.contact-us::after {
+        right: 0; /* Línea a la derecha */
+      }
+      
 }
 
 /* Estilos para pantallas menores o iguales a 600px */
 @media (max-width: 600px) {
-    .content{
-        flex-direction: column; /* Cambia la dirección a vertical (column) */
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .container {
+        flex-direction: column;
     }
+
+    .footer-contents {
+        width: 100%;
+    }
+    .footer-contents.contact-us {
+        position: relative; /* Para que los pseudoelementos se posicionen correctamente */
+      }
+      
+      .footer-contents.contact-us::before,
+      .footer-contents.contact-us::after {
+        content: ""; /* Necesario para que los pseudoelementos se muestren */
+        position: absolute; /* Para posicionar los pseudoelementos */
+        width: 100%; /* Ancho del div */
+        height: 1px; /* Altura de la línea */
+        background-color: #000; /* Color de la línea */
+      }
+      
+      .footer-contents.contact-us::before {
+        top: 0; /* Línea arriba del div */
+      }
+      
+      .footer-contents.contact-us::after {
+        bottom: 0; /* Línea abajo del div */
+      }
+      
 }
-.content{
-    display: flex;
+
+body {
     font-family: Arial, sans-serif;
+    color: #7e1300;
+    margin: 0;
+    padding: 0;
+    background-color: #f5b96f;
 }
-/* Estilos específicos para los elementos dentro de .content */
-.about,
-.contact,
-.links {
-    flex-basis: calc(33.33% - 20px); /* Distribuye el ancho equitativamente (con margen) */
-    margin: 10px; /* Espacio entre los elementos */
+
+.container {
+    display: flex;
     text-align: center;
+    height: auto;
 }
 
-.contact span {
-    display: block;
-    margin-bottom: 5px;
+.footer-contents {
+    display: flex;
+    flex-direction: column;
 }
 
-.links li {
-    display: inline;
-    margin-right: 5px; /* Agrega un margen derecho para separar los elementos */
+h4 {
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
 }
-.bottom{
+
+p {
+    margin-top: 0px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.5;
+
+}
+
+.contact-us {
+    margin-bottom: 10px;
+}
+
+.fab {
+    padding-left: calc((100% /3) / 6);
+    padding-right: calc((100% / 3) /6);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.boton {
+    color: #f57125;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    width: calc((100%/3));
+}
+
+.boton:hover {
+    color: #d03f05;
+}
+
+.icono {
+    color: #f57125;
+    text-decoration: none;
+}
+
+.icono:hover {
+    color: #d03f05;
+}
+
+.copy {
     text-align: center;
 }
